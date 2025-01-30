@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    /* Располагаем в верхней части */
+    width: 100%;
+    /* Ширина 100% */
+    z-index: 1000;
+    /* Устанавливаем высокий z-index */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Добавляем тень для отделения от содержимого */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    /* Заставляет навигацию занимать доступное пространство */
+    justify-content: center;
+    /* Центрирует навигацию */
+}
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: transparent;
+        transition: background-color 0.3s;
+    }
+
+        .nav a:hover {
+            background-color: rgba(11, 170, 243, 0.2);
+        }
+
+
+main {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 80vh; /* Занять всю высоту экрана */
+}
+
+    main form {
+        width: 350px; /* Установите фиксированную ширину формы */
+        max-width: 50%; /* Максимальная ширина 90% от родителя */
+        padding: 20px; /* Внутренний отступ для формы */
+        border: 1px solid silver; /* Граница формы */
+        border-radius: 5px; /* Закругление углов */
+        background-color: #fff; /* Фоновый цвет формы */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    }
+
+main label {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+}
+
+    main input:not([type="submit"]) {
+    width: 80%; /* Установите ширину полей ввода */
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    outline: none;
+    margin-top: 7px;
+    margin-left: auto; /* Центрирование */
+    margin-right: auto; /* Центрирование */
+    display: block; /* Обеспечивает блочное отображение для центрирования */
+}
+
+    main input:not([type="submit"]):focus {
+        border: 1px solid #ff0000;
+    }
+
+main input[type="submit"] {
+    width: 40%; /* Установите ширину кнопки */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: 0;
+    background: #ff6a00;
+    font-weight: bold;
+    color: #833904;
+    cursor: pointer;
+    margin-left: auto; /* Центрирование */
+    margin-right: auto; /* Центрирование */
+    display: block; /* Обеспечивает блочное отображение для центрирования */
+}
+
+    main input[type="submit"]:hover {
+        background: #d96614;
+    }
+
+    main form span {
+    color: #ff0000;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+}

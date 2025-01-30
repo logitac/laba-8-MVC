@@ -1,0 +1,23 @@
+﻿@model Order
+@{
+	ViewData["Title"] = "Заказать звонок";
+	Layout = "~/Views/Shared/Order_Layout.cshtml";
+}
+
+
+<form method="post" asp-controller="order" asp-action="check">
+	@Html.AntiForgeryToken()
+	<label asp-for="Name"></label>
+	<input asp-for="Name" />
+	<span asp-validation-for="Name"></span>
+
+	<label asp-for="Surname"></label>
+	<input asp-for="Surname" />
+	<span asp-validation-for="Surname"></span>
+
+	<label asp-for="Phonenumber"></label>
+	<input asp-for="Phonenumber" />
+	<span asp-validation-for="Phonenumber"></span>
+
+	<input type="submit" valye="Принять" />
+</form>

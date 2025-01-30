@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Order.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="/home">Главная</a>
+            <a href="/services">Услуги</a>
+            <a href="/contacts">Контакты</a>
+            <a href="/order">Заказать звонок</a>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer style="text-align: center; padding: 10px; background-color: #202020; position: relative; bottom: 0; width: 100%; margin-top: 20px;">
+        <p>Все права защищены &copy; @DateTime.Now.Year</p>
+    </footer>
+</body>
+</html>
